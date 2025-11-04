@@ -309,3 +309,207 @@ section {
     box-shadow: var(--shadow-lg);
     filter: saturate(105%);
 }
+
+/* Contacts */
+#contacts {
+    position: relative;
+    padding: 120px 0 140px;
+    color: #fff;
+    overflow: hidden;
+    background:
+        radial-gradient(900px 700px at 12% 15%, rgba(255, 255, 255, .08), transparent 60%),
+        radial-gradient(1100px 800px at 88% 88%, rgba(255, 255, 255, .06), transparent 60%),
+        linear-gradient(135deg, rgba(67, 56, 202, .95), rgba(168, 85, 247, .95));
+}
+
+#contacts::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, .16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .16) 1px, transparent 1px);
+    background-size: 80px 80px;
+    opacity: .22;
+    pointer-events: none;
+}
+
+.contacts-card {
+    position: relative;
+    z-index: 1;
+    margin: 28px auto 0;
+    max-width: 860px;
+    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .28);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .18);
+    padding: 28px;
+}
+
+.contacts-form {
+    color: #0f172a;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 24px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field--full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #0f172a;
+    margin-bottom: 8px;
+    opacity: .9;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    color: #0f172a;
+    background: #ffffff;
+    border: 1px solid rgba(2, 6, 23, .12);
+    border-radius: 16px;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #94a3b8;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: var(--primary-2);
+    box-shadow: var(--ring);
+}
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.form-actions .btn {
+    border-color: rgba(99, 102, 241, .35);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .25), rgba(255, 255, 255, .12));
+    color: #fff;
+}
+
+.section-title-contacts {
+    margin: 0 0 18px;
+    font-size: 44px;
+    font-weight: 800;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.section-title-contacts::after {
+    content: "";
+    display: block;
+    width: 84px;
+    height: 4px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+    background: #FFFFFF;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--primary-2);
+    outline-offset: 3px;
+}
+
+/* ///////////////////// */
+
+/* tablet */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 24px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .about-image {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .content {
+        padding: 0 20px;
+    }
+
+    .mobile-menu-toggle {
+        display: inline-block;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: var(--nav-bg);
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px 20px 16px;
+        border-bottom: 1px solid rgba(15, 23, 42, .06);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li a {
+        padding: 10px 6px;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 9vw, 48px);
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+}
