@@ -1,119 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Shape</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <!-- Навигация -->
-    <nav id="navbar">
+    <!-- Navigation -->
+     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Personal Shape</div>
+            <div class="logo">Portfolio of M.P.</div>
             <ul class="nav-links">
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#portfolio">Портфолио</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
-            <!-- Бургер -->
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Открыть меню" aria-expanded="false">
+            <!-- burger -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false">
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
                 <span class="hamburger"></span>
             </button>
         </div>
-    </nav>
+     </nav>
 
-    <!-- Hero -->
-    <section id="home">
+     <!-- Hero -->
+      <section id="home">
         <div class="hero">
-            <p class="eyebrow">Креативный дизайнер</p>
-            <h1>Добро пожаловать в Personal Shape</h1>
-            <a href="#contact" class="btn">Связаться</a>
+            <p class="eyebrow">Full-Stack Developer</p>
+            <h1>Welcome to My Digital Space</h1>
+            <a href="Mariia-Prehaniuk-CV.pdf" download class="btn">Download CV</a>
         </div>
-    </section>
+      </section>
 
-    <!-- Обо мне -->
-    <section id="about">
+      <section id="about">
         <div class="content">
-            <h2 class="section-title">Обо мне</h2>
+            <h2 class="section-title">About me</h2>
             <div class="about-grid">
                 <figure class="about-image">
-                    <!-- Подставь своё фото -->
-                    <img src="img/me.jpg" alt="Моё фото">
+                    <img src="img/photo.png" alt="My-Photo">
                 </figure>
                 <div class="about-text">
-                    <p>Я — дизайнер с опытом более 5 лет. Создаю айдентику, сайты и визуальные системы, помогаю бизнесу
-                        выделяться и говорить с аудиторией в одном стиле.</p>
-                    <p>Работаю от исследования и концепции до финальной реализации. Люблю чистые композиции, типографику
-                        и продуманные интерфейсы.</p>
+                    <p>Hi! I'm Mariia, a full-stack developer who enjoys creating and learning every day.
+                    For me, web development is not just work — it’s a way to express ideas and grow through challenges.</p>
+                    <p>I believe that every project is an opportunity to learn something new and become better.</p>
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Портфолио -->
-    <section id="portfolio">
-        <div class="content">
-            <h2 class="section-title">Портфолио</h2>
-            <div class="gallery">
-                <img src="img/project1.jpg" alt="Проект 1">
-                <img src="img/project2.jpg" alt="Проект 2">
-                <img src="img/project3.jpg" alt="Проект 3">
-            </div>
-        </div>
-    </section>
+      <!-- Portfolio -->
 
-    <!-- Контакты -->
-    <section id="contact">
-        <div class="content">
-            <h2 class="section-title">Контакты</h2>
-
-            <!-- Карточка-форма -->
-            <div class="contact-card">
-                <form class="contact-form" action="#" method="post" novalidate>
-                    <div class="form-grid">
-                        <div class="form-field">
-                            <label for="name">Имя</label>
-                            <input id="name" name="name" type="text" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="email">Email</label>
-                            <input id="email" name="email" type="email" placeholder="name@example.com" required>
-                        </div>
-
-                        <div class="form-field form-field--full">
-                            <label for="message">Сообщение</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Коротко опишите задачу"
-                                required></textarea>
-                        </div>
-
-                        <div class="form-actions">
-                            <button type="submit" class="btn">Отправить</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    </section>
-
-    <script>
-        // Мобильное меню
-        const toggle = document.getElementById('mobileMenuToggle');
-        const navLinks = document.querySelector('.nav-links');
-
-        toggle.addEventListener('click', () => {
-            const expanded = toggle.getAttribute('aria-expanded') === 'true';
-            toggle.setAttribute('aria-expanded', String(!expanded));
-            navLinks.classList.toggle('active');
-            toggle.classList.toggle('active');
-        });
-    </script>
 </body>
-
 </html>
